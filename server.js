@@ -452,7 +452,7 @@ client.on("raw", async event => {
 });
 
 client.on("guildCreate", guild => {
-  let alp1 = client.channels.get("747336242395480114");
+  let alp1 = client.channels.get("793185192328036372");
 
   const alp = new Discord.RichEmbed()
     .setTitle("SUNUCUYA EKLENDİM")
@@ -466,7 +466,7 @@ client.on("guildCreate", guild => {
 });
 
 client.on("guildDelete", guild => {
-  let alp2 = client.channels.get("747336242395480114");
+  let alp2 = client.channels.get("793185192328036372");
 
   const alp3 = new Discord.RichEmbed()
     .setTitle("SUNUCUDAN ATILDIM")
