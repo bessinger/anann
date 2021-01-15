@@ -5,15 +5,11 @@ exports.run = async (client, message, args) => {
   if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(new Discord.RichEmbed()
 .setTitle(`Uyarı | Warning!`)
 .setDescription(`**[\`System\`]**\nBu Komutu Kullanmak İçin; \`ADMINISTRATOR\` Yetkisine Sahip Olmalısın!`))
-let link = `[Destek Sunucusu!](https://discord.gg/ywqVAwb)`
-let link2 = `[Support Server!](https://discord.gg/ywqVAwb)`
-let link1 = `[Destek](https://discord.gg/ywqVAwb)`
 let p = ayarlar.prefix
 if(!args[0]) {
 return message.channel.send(new Discord.RichEmbed()                              
 .setColor("ff0000")
-.setTitle(`${client.user.username} | Seviye-Rol Komutları!`)
-.setDescription(`**${link} & ${link1}**`)          
+.setTitle(`${client.user.username} | Seviye-Rol Komutları!`)          
 .setTimestamp()        
 .setThumbnail(client.user.avatarURL)   
 .setFooter(`${client.user.username} Seviye-Rol Sistemi!`, client.user.avatarURL)  
