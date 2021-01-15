@@ -451,34 +451,6 @@ client.on("raw", async event => {
   }
 });
 
-client.on("guildCreate", guild => {
-  let alp1 = client.channels.get("793185192328036372");
-
-  const alp = new Discord.RichEmbed()
-    .setTitle("SUNUCUYA EKLENDİM")
-    .setColor("GREEN")
-    .addField("** Sunucu ID**", `\`${guild.id}\``)
-    .addField("** Sunucu İsmi**", `\`${guild.name}\``)
-    .addField("** Üye Sayısı**", `\`${guild.members.size}\``)
-    .addField("** Kurucu**", `\`${guild.owner.user.tag}\``)
-    .addField("** Kurucu ID**", `\`${guild.owner.user.id}\``);
-  alp1.send(alp);
-});
-
-client.on("guildDelete", guild => {
-  let alp2 = client.channels.get("793185192328036372");
-
-  const alp3 = new Discord.RichEmbed()
-    .setTitle("SUNUCUDAN ATILDIM")
-    .setColor("RED")
-    .addField("** Sunucu ID**", `\`${guild.id}\``)
-    .addField("** Sunucu İsmi**", `\`${guild.name}\``)
-    .addField("** Üye Sayısı**", `\`${guild.members.size}\``)
-    .addField("** Kurucu**", `\`${guild.owner.user.tag}\``)
-    .addField("** Kurucu ID**", `\`${guild.owner.user.id}\``);
-  alp2.send(alp3);
-});
-
 client.on("guildMemberAdd", async member => {
   let ozelhosgeldin = await db.fetch(`ozelhosgeldin_${member.guild.id}`);
   if (!ozelhosgeldin) return;
