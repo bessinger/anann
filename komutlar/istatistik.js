@@ -6,7 +6,7 @@ exports.run = async (bot, message, args) => {
    const çalışmasüresi = moment.duration(bot.uptime).format(" D [gün], H [saat], m [dakika], s [saniye]");
    const lewixcode = new Discord.RichEmbed()
   .setColor('RANDOM')
-  .setFooter('Lewix Bot  \'İstatistikler', bot.user.avatarURL)
+  .setFooter('Bessinger Bot  \'İstatistikler', bot.user.avatarURL)
   .addField("»  **Geliştirici** ","<@676886594581692427>")
   .addField("» **Bellek kullanımı**", (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2) + ' MB', true) 
   .addField("» **Çalışma süresi**", çalışmasüresi)
